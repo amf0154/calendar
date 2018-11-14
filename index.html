@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div id="bg_form">
+<div id="form">
+   <div id="body_form"></div>
+   <a class="closer" id="closeevent"></a>
+ </div>
+ </div>
+<div class="container">
+    <div class="top_menu">
+			<div class="left_menu">
+       <a href="#" class="menu_buttons" id="next" onclick="curMonth()">Update</a>
+			</div>
+			<div class="right_menu">
+				<div class="jump">
+				<form class="form-inline">
+            <label for="month">Go To: </label>
+            <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+                <option value=0>Jan</option>
+                <option value=1>Feb</option>
+                <option value=2>Mar</option>
+                <option value=3>Apr</option>
+                <option value=4>May</option>
+                <option value=5>Jun</option>
+                <option value=6>Jul</option>
+                <option value=7>Aug</option>
+                <option value=8>Sep</option>
+                <option value=9>Oct</option>
+                <option value=10>Nov</option>
+                <option value=11>Dec</option>
+            </select>
+
+            <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
+            <option value=2015>2015</option>
+            <option value=2016>2016</option>
+            <option value=2017>2017</option>
+            <option value=2018>2018</option>
+            <option value=2019>2019</option>
+            <option value=2020>2020</option>
+        </select></form>
+			  </div>
+			</div>
+							<div class="search_menu">
+           <form class="search-container">
+           <input type="text" id="search-bar" placeholder="What are you looking for?">
+           </form>
+								<img class="search-icon" onclick="searchInLocalStorageByQuery()"  src="/assets/images/search.png">
+       </div>
+			    </div>
+
+	        <div class="navi">
+            <a href="#" class="linker" id="previous" onclick="previous()">&#60;</a>
+             <b class="monthandyear" id="monthAndYear"></b>
+            <a href="#" class="linker" id="next" onclick="next()">&#62;</a>
+						<a href="#" class="linker" id="next" onclick="curMonth()">Today</a>
+        </div>
+        <table class="cltable" align="center" id="calendar">
+            <thead>
+            <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+							  <th>Sun</th>
+            </tr>
+            </thead>
+            <tbody id="calendar-body">
+            </tbody>
+        </table>
+        <br/>
+</div>
+	Developer: <b>Gleb@sgsrv.ru</b><br/>
+	App optimised for screen resolution: <b>1280x1024</b>
+<script src="index.js"></script>
+</body>
+</html>
