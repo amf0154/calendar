@@ -51,13 +51,8 @@ body {
 .right_menu{
 	display: flex;
   flex-direction: row;
-/*	padding-left: 40%; */
 }
-.search{
-	//	padding-left: 5px;
-	//  padding-right: 5px;
 
-}
 .current_day{
 	background: #F4F4F4;
 }
@@ -88,12 +83,10 @@ td > div {
   left: 5px;
   padding: 0px 3px;
   color: black;
-
 }
 
 table {
   border: 1px solid #ccc;
-  border-right: 0;
 }
 
 #bg_form{

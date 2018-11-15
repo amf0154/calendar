@@ -84,7 +84,7 @@ function getActionForm(y,m,d) {
 function getMessageForm(body) {
    document.getElementById('body_form').innerHTML = body;
    document.getElementById("bg_form").style.left  = (window.innerWidth/3)+ "px";
-   document.getElementById("bg_form").style.top = (window.innerHeight/4) + "px";
+   document.getElementById("bg_form").style.top = (window.innerHeight/3) + "px";
    document.getElementById("bg_form").style.position = "fixed";
    document.getElementById("bg_form").style.display = "block";
 }
