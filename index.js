@@ -75,7 +75,7 @@ function getActionForm(y,m,d) {
    '<a href="#" class="linker" onclick="delElFromStorage('+y+","+m+","+d+')" id="form_delete">Delete</a></div>';
    let bodyForm = (searchInStorage(y,m,d))? getElementFromStorage(y,m,d) : body;
    document.getElementById('body_form').innerHTML = bodyForm;
-   document.getElementById("bg_form").style.left  = (rect.left + container.clientWidth + 10)+ "px";
+   document.getElementById("bg_form").style.left  = (rect.left + container.clientWidth +5)+ "px";
    document.getElementById("bg_form").style.top = (rect.top - container.offsetHeight +10) + "px";
    document.getElementById("bg_form").style.position = "fixed";
    document.getElementById("bg_form").style.display = "block";
@@ -215,7 +215,7 @@ function showCalendar(month, year) {
                 var get_number_day = cell.getAttribute("date_id");
                 var elid = cell.getAttribute("date_id");
                 let prevmonth=month - 1;
-                let elData = document.createElement('div');
+                let elData = document.createElement('span');
                 elData.className = 'eldata';
                 let elNote = document.createElement('div');
                 elNote.className = 'elnote';
@@ -229,6 +229,7 @@ function showCalendar(month, year) {
                 elData.appendChild(cellText);
                 cell.appendChild(elData);
                 cell.classList.add("simple_day");
+                elNote.appendChild(elData);
                 cell.appendChild(elNote);
                 row.appendChild(cell);
           }else if (date > daysInMonth) {
@@ -242,7 +243,7 @@ function showCalendar(month, year) {
                  getActionForm(year,month,cell.getAttribute("date_id"));
              };
              let get_number_day = cell.getAttribute("date_id");
-             let elData = document.createElement('div');
+             let elData = document.createElement('span');
              elData.className = 'eldata';
              let elNote = document.createElement('div');
              elNote.className = 'elnote';
@@ -259,7 +260,8 @@ function showCalendar(month, year) {
                   cell.classList.add("current_day");
              }
              elData.appendChild(cellText);
-             cell.appendChild(elData);
+           //  cell.appendChild(elData);
+           elNote.appendChild(elData);
              cell.appendChild(elNote);
              row.appendChild(cell);
              date++;

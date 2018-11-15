@@ -68,30 +68,32 @@ body {
 	background: white;
 }
 
-table.cltable {
-  table-layout:fixed;
-}
-table.cltable td {
-  overflow: hidden;
-  width:100px;
-  height:100px;
-}
+
+
 th{
 	height: 20px;
 }
-td{
-	text-align: center;
-	border-top: 1px solid rgba(255,255,255,0.3);
-	border: 1px solid #EDEDED;
+td > div {
+  position: relative;
+	width: 90px;
+	height: 90px;
+  padding: 10px;
+	padding-top:25px;
+  border: 1px solid #ccc;
 }
 
+.eldata {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 0px 3px;
+  color: black;
 
-.eldata{
-  width: 100%;
-  text-align: left;
-  position: relative;
-  top: -20px;
-  padding-left:2px;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-right: 0;
 }
 
 #bg_form{
@@ -105,20 +107,8 @@ td{
 	border-top: 10px solid rgba(113, 101, 58, 0);
 	border-bottom: 10px solid rgba(113, 101, 58, 0);
 	left: -10px;
-	top: 110px;
+	top: 150px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .search_menu{
@@ -167,22 +157,6 @@ input#search-bar{
   top: -12px;
   right: 22px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .closer{
