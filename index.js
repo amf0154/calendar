@@ -200,7 +200,7 @@ function showCalendar(month, year) {
    selectYear.value = year;
    selectMonth.value = month;
    let date = 1;
-   for(let i = 0; i < 5; i++) {
+   for(let i = 0; i < 6; i++) {
        let row = document.createElement("tr");
        for(let j = 1; j < 8; j++) {
           if(i === 0 && j < firstDay) {
@@ -260,8 +260,7 @@ function showCalendar(month, year) {
                   cell.classList.add("current_day");
              }
              elData.appendChild(cellText);
-           //  cell.appendChild(elData);
-           elNote.appendChild(elData);
+             elNote.appendChild(elData);
              cell.appendChild(elNote);
              row.appendChild(cell);
              date++;

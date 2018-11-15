@@ -78,9 +78,10 @@ td > div {
 }
 
 .eldata {
+	font-weight: 600;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 3px;
+  left: 2px;
   padding: 0px 3px;
   color: black;
 }
